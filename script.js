@@ -18,11 +18,14 @@ console.log(questions);
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
 
+// Track current question index
+let currentQuestion = 0;
+
 // Display the current question and options
 function showQuestion() {
-  questionElement.textContent = questions[0].question;
+  questionElement.textContent = questions[currentQuestion].question;
 
-  questions[0].options.forEach(option => {
+  questions[currentQuestion].options.forEach(option => {
     const button = document.createElement("button");
     button.textContent = option;
     optionsElement.appendChild(button);
