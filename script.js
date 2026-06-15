@@ -121,6 +121,9 @@ const questionElement = document.getElementById("question");
 const questionCounter = document.getElementById("question-counter");
 const optionsElement = document.getElementById("options");
 const nextButton = document.getElementById("next-btn");
+const startButton = document.getElementById("start-btn");
+const startScreen = document.getElementById("start-screen");
+const quizBox = document.getElementById("quiz-box");
 
 // Track current question index
 let currentQuestion = 0;
@@ -174,7 +177,14 @@ optionsElement.appendChild(button);
 }
 
 // Load first question when page opens
-showQuestion();
+//showQuestion();
+
+startButton.addEventListener("click", () => {
+  startScreen.style.display = "none";
+  quizBox.style.display = "block";
+
+  showQuestion();
+});
 
 nextButton.addEventListener("click", () => {
   currentQuestion++;
