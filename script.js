@@ -75,5 +75,13 @@ nextButton.addEventListener("click", () => {
 
   if (currentQuestion < questions.length) {
     showQuestion();
+  } else {
+    const percentage = (score / questions.length) * 100;
+
+    document.getElementById("quiz-box").innerHTML = `
+      <h2>Quiz Completed!</h2>
+      <p>Score: ${score}/${questions.length}</p>
+      <p>Percentage: ${percentage}%</p>
+    `;
   }
 });
