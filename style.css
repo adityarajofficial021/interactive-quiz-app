@@ -132,3 +132,47 @@ h1 {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
 }
+
+.result-screen {
+  text-align: center;
+  padding: 30px;
+}
+
+.result-screen h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.result-message {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.result-percentage {
+  font-size: 72px;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.result-score {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.restart-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}

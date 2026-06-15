@@ -205,12 +205,24 @@ if (percentage >= 80) {
   message = "Needs Improvement!";
 }
 
-    document.getElementById("quiz-box").innerHTML = `
-  <h2>Quiz Completed!</h2>
-  <p>Score: ${score}/${questions.length}</p>
-  <p>Percentage: ${percentage}%</p>
-  <h3>${message}</h3>
-  <button onclick="location.reload()">Restart Quiz</button>
+   document.getElementById("quiz-box").innerHTML = `
+  <div class="result-screen">
+    <h2>🎉 Quiz Completed!</h2>
+
+    <h3 class="result-message">${message}</h3>
+
+    <div class="result-percentage">
+      ${percentage}%
+    </div>
+
+    <p class="result-score">
+      Score: ${score}/${questions.length}
+    </p>
+
+    <button onclick="location.reload()" class="restart-btn">
+      Try Again
+    </button>
+  </div>
 `;
   }
 });
