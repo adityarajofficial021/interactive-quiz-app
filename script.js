@@ -44,7 +44,17 @@ function showQuestion() {
   questions[currentQuestion].options.forEach(option => {
     const button = document.createElement("button");
     button.textContent = option;
-    optionsElement.appendChild(button);
+
+button.addEventListener("click", () => {
+  if (option === questions[currentQuestion].answer) {
+    score++;
+    alert("Correct Answer!");
+  } else {
+    alert("Wrong Answer!");
+  }
+});
+
+optionsElement.appendChild(button);
   });
 }
 
