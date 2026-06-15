@@ -203,6 +203,7 @@ if (percentage >= 80) {
   <p>Score: ${score}/${questions.length}</p>
   <p>Percentage: ${percentage}%</p>
   <h3>${message}</h3>
+  <button onclick="location.reload()">Restart Quiz</button>
 `;
   }
 });
