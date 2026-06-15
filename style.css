@@ -1,0 +1,54 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center content on page */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+/* Quiz card */
+.container {
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Quiz box styling */
+#quiz-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Question */
+#question {
+  margin-bottom: 20px;
+}
+
+/* Options container */
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Option buttons */
+#options button,
+#next-btn {
+  padding: 12px;
+  cursor: pointer;
+}
+
+/* Next button */
+#next-btn {
+  margin-top: 20px;
+  width: 100%;
+}
