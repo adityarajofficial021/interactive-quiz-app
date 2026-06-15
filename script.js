@@ -8,29 +8,26 @@ const questions = [
       "Java System"
     ],
     answer: "JavaScript"
-  },
-
-  {
-    question: "Which keyword is used to declare a variable?",
-    options: [
-      "let",
-      "print",
-      "show",
-      "echo"
-    ],
-    answer: "let"
-  },
-
-  {
-    question: "Which company developed JavaScript?",
-    options: [
-      "Netscape",
-      "Microsoft",
-      "Google",
-      "Apple"
-    ],
-    answer: "Netscape"
   }
 ];
 
+// Display questions in console for debugging
 console.log(questions);
+
+// Select required HTML elements
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+
+// Display the current question and options
+function showQuestion() {
+  questionElement.textContent = questions[0].question;
+
+  questions[0].options.forEach(option => {
+    const button = document.createElement("button");
+    button.textContent = option;
+    optionsElement.appendChild(button);
+  });
+}
+
+// Load first question when page opens
+showQuestion();
