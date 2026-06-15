@@ -118,6 +118,7 @@ console.log(questions);
 
 // Select required HTML elements
 const questionElement = document.getElementById("question");
+const questionCounter = document.getElementById("question-counter");
 const optionsElement = document.getElementById("options");
 const nextButton = document.getElementById("next-btn");
 
@@ -134,6 +135,8 @@ let answered = false;
 function showQuestion() {
   answered = false;
   optionsElement.innerHTML = "";
+  questionCounter.textContent =
+  `Question ${currentQuestion + 1}/${questions.length}`;
   questionElement.textContent = questions[currentQuestion].question;
 
   questions[currentQuestion].options.forEach(option => {
