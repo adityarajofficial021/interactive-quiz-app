@@ -146,11 +146,17 @@ button.addEventListener("click", () => {
 
   answered = true;
 
+  const buttons = optionsElement.querySelectorAll("button");
+
+  buttons.forEach(btn => btn.disabled = true);
+  
   if (option === questions[currentQuestion].answer) {
     score++;
-    alert("Correct Answer!");
+    button.style.backgroundColor = "green";
+    button.style.color = "white";
   } else {
-    alert("Wrong Answer!");
+    button.style.backgroundColor = "red";
+    button.style.color = "white";
   }
 });
 
