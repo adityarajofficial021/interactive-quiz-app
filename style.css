@@ -19,6 +19,7 @@ body {
 .container {
   width: 90%;
   max-width: 800px;
+  margin:auto;
 }
 
 /* Quiz box styling */
@@ -99,4 +100,35 @@ h1 {
   background-color: #ef4444 !important;
   color: white !important;
   border-color: #ef4444 !important;
+}
+
+#start-screen {
+  text-align: center;
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#start-screen p {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #555;
+}
+
+#start-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
 }
