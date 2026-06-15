@@ -8,7 +8,18 @@ const questions = [
       "Java System"
     ],
     answer: "JavaScript"
-  }
+  },
+
+  {
+  question: "Which keyword is used to declare a variable?",
+  options: [
+    "let",
+    "print",
+    "show",
+    "echo"
+  ],
+  answer: "let"
+}
 ];
 
 // Display questions in console for debugging
@@ -17,12 +28,14 @@ console.log(questions);
 // Select required HTML elements
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
+const nextButton = document.getElementById("next-btn");
 
 // Track current question index
 let currentQuestion = 0;
 
 // Display the current question and options
 function showQuestion() {
+  optionsElement.innerHTML = "";
   questionElement.textContent = questions[currentQuestion].question;
 
   questions[currentQuestion].options.forEach(option => {
@@ -34,3 +47,11 @@ function showQuestion() {
 
 // Load first question when page opens
 showQuestion();
+
+nextButton.addEventListener("click", () => {
+  currentQuestion++;
+
+  if (currentQuestion < questions.length) {
+    showQuestion();
+  }
+});
