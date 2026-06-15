@@ -18,7 +18,7 @@ body {
 /* Quiz card */
 .container {
   width: 90%;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 /* Quiz box styling */
@@ -61,11 +61,14 @@ body {
   color: white;
   font-weight: bold;
 }
-#options button:hover,
-#next-btn:hover {
+#options button:hover {
   background-color: #f0f0f0;
   transform: translateY(-2px);
-  opacity: 0.95;
+}
+
+#next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
 }
 
 h1 {
@@ -79,10 +82,6 @@ h1 {
   font-weight: 500;
 }
 
-#options button:hover {
-  border-color: #2563eb;
-  transform: translateY(-2px);
-}
 
 #question-counter {
   color: #6b7280;
