@@ -19,6 +19,94 @@ const questions = [
     "echo"
   ],
   answer: "let"
+},
+
+{
+  question: "What is JavaScript?",
+  options: [
+    "A compiled programming language",
+    "A lightweight, interpreted scripting language",
+    "A database query language",
+    "A markup language"
+  ],
+  answer: "A lightweight, interpreted scripting language"
+},
+
+{
+  question: "What is the output of typeof null?",
+  options: [
+    "null",
+    "undefined",
+    "object",
+    "boolean"
+  ],
+  answer: "object"
+},
+
+{
+  question: "Which of the following is NOT a JavaScript data type?",
+  options: [
+    "String",
+    "Boolean",
+    "Float",
+    "Symbol"
+  ],
+  answer: "Float"
+},
+
+{
+  question: "What does === mean in JavaScript?",
+  options: [
+    "Assignment",
+    "Loose equality",
+    "Strict equality (value and type)",
+    "Not equal"
+  ],
+  answer: "Strict equality (value and type)"
+},
+
+{
+  question: "What is a closure in JavaScript?",
+  options: [
+    "A way to close the browser",
+    "A function that retains access to its outer scope",
+    "A method to end a loop",
+    "A type of error"
+  ],
+  answer: "A function that retains access to its outer scope"
+},
+
+{
+  question: "What does the this keyword refer to in JavaScript?",
+  options: [
+    "The previous function",
+    "The global object always",
+    "The object the function belongs to",
+    "The parent class"
+  ],
+  answer: "The object the function belongs to"
+},
+
+{
+  question: "Which method removes the last element from an array?",
+  options: [
+    "shift()",
+    "unshift()",
+    "pop()",
+    "splice()"
+  ],
+  answer: "pop()"
+},
+
+{
+  question: "What is the purpose of use strict?",
+  options: [
+    "Enables ES6 features",
+    "Enforces stricter parsing and error handling",
+    "Disables console.log",
+    "Forces synchronous execution"
+  ],
+  answer: "Enforces stricter parsing and error handling"
 }
 ];
 
