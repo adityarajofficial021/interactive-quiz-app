@@ -26,6 +26,7 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Question */
@@ -51,4 +52,8 @@ body {
 #next-btn {
   margin-top: 20px;
   width: 100%;
+}
+#options button:hover,
+#next-btn:hover {
+  background-color: #f0f0f0;
 }

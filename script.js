@@ -22,6 +22,9 @@ const questions = [
 }
 ];
 
+// Shuffle questions randomly
+questions.sort(() => Math.random() - 0.5);
+
 // Display questions in console for debugging
 console.log(questions);
 
