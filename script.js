@@ -185,12 +185,24 @@ nextButton.addEventListener("click", () => {
   if (currentQuestion < questions.length) {
     showQuestion();
   } else {
-    const percentage = (score / questions.length) * 100;
+    const percentage =
+  Math.round((score / questions.length) * 100);
+
+  let message = "";
+
+if (percentage >= 80) {
+  message = "Excellent!";
+} else if (percentage >= 60) {
+  message = "Good Job!";
+} else {
+  message = "Needs Improvement!";
+}
 
     document.getElementById("quiz-box").innerHTML = `
-      <h2>Quiz Completed!</h2>
-      <p>Score: ${score}/${questions.length}</p>
-      <p>Percentage: ${percentage}%</p>
-    `;
+  <h2>Quiz Completed!</h2>
+  <p>Score: ${score}/${questions.length}</p>
+  <p>Percentage: ${percentage}%</p>
+  <h3>${message}</h3>
+`;
   }
 });
