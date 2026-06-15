@@ -155,18 +155,15 @@ button.addEventListener("click", () => {
   
   if (option === questions[currentQuestion].answer) {
   score++;
-  button.style.backgroundColor = "green";
-  button.style.color = "white";
+  button.classList.add("correct");
 } else {
-  button.style.backgroundColor = "red";
-  button.style.color = "white";
+  button.classList.add("wrong");
 
   const buttons = optionsElement.querySelectorAll("button");
 
   buttons.forEach(btn => {
     if (btn.textContent === questions[currentQuestion].answer) {
-      btn.style.backgroundColor = "green";
-      btn.style.color = "white";
+      btn.classList.add("correct");
     }
   });
 }

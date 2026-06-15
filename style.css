@@ -89,3 +89,15 @@ h1 {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+.correct {
+  background-color: #22c55e !important;
+  color: white !important;
+  border-color: #22c55e !important;
+}
+
+.wrong {
+  background-color: #ef4444 !important;
+  color: white !important;
+  border-color: #ef4444 !important;
+}
