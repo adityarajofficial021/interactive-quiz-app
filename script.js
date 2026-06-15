@@ -151,13 +151,22 @@ button.addEventListener("click", () => {
   buttons.forEach(btn => btn.disabled = true);
   
   if (option === questions[currentQuestion].answer) {
-    score++;
-    button.style.backgroundColor = "green";
-    button.style.color = "white";
-  } else {
-    button.style.backgroundColor = "red";
-    button.style.color = "white";
-  }
+  score++;
+  button.style.backgroundColor = "green";
+  button.style.color = "white";
+} else {
+  button.style.backgroundColor = "red";
+  button.style.color = "white";
+
+  const buttons = optionsElement.querySelectorAll("button");
+
+  buttons.forEach(btn => {
+    if (btn.textContent === questions[currentQuestion].answer) {
+      btn.style.backgroundColor = "green";
+      btn.style.color = "white";
+    }
+  });
+}
 });
 
 optionsElement.appendChild(button);
