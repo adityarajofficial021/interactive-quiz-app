@@ -33,6 +33,9 @@ const nextButton = document.getElementById("next-btn");
 // Track current question index
 let currentQuestion = 0;
 
+// Track user score
+let score = 0;
+
 // Display the current question and options
 function showQuestion() {
   optionsElement.innerHTML = "";
