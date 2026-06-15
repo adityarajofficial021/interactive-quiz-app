@@ -36,8 +36,12 @@ let currentQuestion = 0;
 // Track user score
 let score = 0;
 
+// Track whether current question is already answered
+let answered = false;
+
 // Display the current question and options
 function showQuestion() {
+  answered = false;
   optionsElement.innerHTML = "";
   questionElement.textContent = questions[currentQuestion].question;
 
@@ -46,6 +50,11 @@ function showQuestion() {
     button.textContent = option;
 
 button.addEventListener("click", () => {
+
+  if (answered) return;
+
+  answered = true;
+
   if (option === questions[currentQuestion].answer) {
     score++;
     alert("Correct Answer!");
