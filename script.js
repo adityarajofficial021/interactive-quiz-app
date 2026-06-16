@@ -132,6 +132,8 @@ let currentQuestion = 0;
 // Track user score
 let score = 0;
 
+let startTime;
+
 // Track whether current question is already answered
 let answered = false;
 
@@ -188,7 +190,7 @@ optionsElement.appendChild(button);
 startButton.addEventListener("click", () => {
   startScreen.style.display = "none";
   quizBox.style.display = "block";
-
+  startTime = Date.now();
   showQuestion();
 });
 
@@ -198,6 +200,17 @@ nextButton.addEventListener("click", () => {
   if (currentQuestion < questions.length) {
     showQuestion();
   } else {
+    const endTime = Date.now();
+
+const timeTaken =
+  Math.floor((endTime - startTime) / 1000);
+
+const minutes =
+  Math.floor(timeTaken / 60);
+
+const seconds =
+  timeTaken % 60;
+
     const percentage =
   Math.round((score / questions.length) * 100);
 
@@ -223,6 +236,10 @@ if (percentage >= 80) {
 
     <p class="result-score">
       Score: ${score}/${questions.length}
+    </p>
+
+    <p class="result-time">
+      Time Taken: ${minutes}m ${seconds}s
     </p>
 
     <button onclick="location.reload()" class="restart-btn">
