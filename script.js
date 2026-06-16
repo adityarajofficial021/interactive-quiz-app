@@ -124,6 +124,7 @@ const nextButton = document.getElementById("next-btn");
 const startButton = document.getElementById("start-btn");
 const startScreen = document.getElementById("start-screen");
 const quizBox = document.getElementById("quiz-box");
+const progressBar = document.getElementById("progress-bar");
 
 // Track current question index
 let currentQuestion = 0;
@@ -140,6 +141,11 @@ function showQuestion() {
   optionsElement.innerHTML = "";
   questionCounter.textContent =
   `Question ${currentQuestion + 1}/${questions.length}`;
+
+  const progress =
+  ((currentQuestion + 1) / questions.length) * 100;
+
+progressBar.style.width = `${progress}%`;
   questionElement.textContent = questions[currentQuestion].question;
 
   questions[currentQuestion].options.forEach(option => {
