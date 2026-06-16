@@ -192,3 +192,8 @@ h1 {
   background-color: #2563eb;
   transition: width 0.3s ease;
 }
+
+#start-screen p {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
