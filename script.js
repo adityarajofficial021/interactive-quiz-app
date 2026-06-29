@@ -136,6 +136,7 @@ const startButton = document.getElementById("start-btn");
 const startScreen = document.getElementById("start-screen");
 const quizBox = document.getElementById("quiz-box");
 const progressBar = document.getElementById("progress-bar");
+const themeButton = document.getElementById("theme-btn");
 
 // Store the current question index
 let currentQuestion = 0;
