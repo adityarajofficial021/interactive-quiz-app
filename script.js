@@ -318,3 +318,23 @@ nextButton.addEventListener("click", () => {
     `;
   }
 });
+// Check saved theme
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+    themeButton.textContent = "☀️ Light Mode";
+}
+
+// Toggle theme
+themeButton.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        themeButton.textContent = "☀️ Light Mode";
+        localStorage.setItem("theme","dark");
+    }else{
+        themeButton.textContent = "🌙 Dark Mode";
+        localStorage.setItem("theme","light");
+    }
+
+});
